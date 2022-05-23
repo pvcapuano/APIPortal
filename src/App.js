@@ -1,8 +1,14 @@
 import "./App.css";
-import LeftNavbar from "./components/leftnavbar";
+import Sidebar from "./components/Sidebar";
 
 function App() {
-  return <LeftNavbar />;
+  return (
+    <div className="app">
+      <h1>ola</h1>
+
+      <Sidebar />
+    </div>
+  );
 }
 
 export default App;
