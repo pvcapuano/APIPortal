@@ -32,7 +32,7 @@ export default createGlobalStyle`
         --primary: #000;
         --secondary: #15181c;
         --search: #202327;
-        --white: #D9D9D9;
+        --white: #FFFFFF;
         --gray: #7a7a7a;
         --outline: #2f3336;
         --retweet: #00c06b;
