@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sidebar.css";
+import { SidebarMenu, TwitterIconBird, TweetButton } from "./styles";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import SidebarOption from "../SidebarOption";
 import HomeIcon from "@mui/icons-material/Home";
@@ -14,8 +14,10 @@ import { Button } from "@mui/material";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <TwitterIcon className="sidebar__twitterIcon" />
+    <SidebarMenu>
+      <TwitterIconBird>
+        <TwitterIcon />
+      </TwitterIconBird>
 
       <SidebarOption Icon={HomeIcon} text="Home" />
       <SidebarOption Icon={SearchIcon} text="Explore" />
@@ -26,10 +28,12 @@ const Sidebar = () => {
       <SidebarOption Icon={PermIdentityIcon} text="Profile" />
       <SidebarOption Icon={MoreHorizIcon} text="More" />
 
-      <Button variant="outlined" className="sidebar__tweet" fullWidth>
-        Tweet
-      </Button>
-    </div>
+      <TweetButton>
+        <Button variant="outlined" fullWidth>
+          Tweet
+        </Button>
+      </TweetButton>
+    </SidebarMenu>
   );
 };
 
