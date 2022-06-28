@@ -5,6 +5,7 @@ import {
   ProfileData,
   CalendarIcon,
   Followage,
+  EditButton,
 } from './styles';
 
 const ProfilePage = () => {
@@ -15,12 +16,11 @@ const ProfilePage = () => {
       </Banner>
 
       <ProfileData>
-        {/* <EditButton>Editar perfil</EditButton> */}
+        <EditButton>Editar perfil</EditButton>
 
         <h1>PV Capuano</h1>
         <h2>@pvcapuano</h2>
 
-       
         <ul>
           <li>
             <CalendarIcon />
@@ -33,7 +33,7 @@ const ProfilePage = () => {
             seguindo <strong>10</strong>
           </span>
           <span>
-            <strong>20</strong>seguidores
+            seguidores <strong>20</strong>
           </span>
         </Followage>
       </ProfileData>
