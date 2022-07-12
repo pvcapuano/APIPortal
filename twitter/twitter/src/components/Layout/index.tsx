@@ -1,5 +1,6 @@
 import Main from '../Main';
 import MenuBar from '../MenuBar';
+import Sidebar from '../Sidebar';
 import { Container, Wrapper } from './styles';
 
 const Layout = () => {
@@ -8,7 +9,7 @@ const Layout = () => {
       <Wrapper>
         <MenuBar />
         <Main />
-        {/* <Sidebar /> */}
+        <Sidebar />
       </Wrapper>
     </Container>
   );
