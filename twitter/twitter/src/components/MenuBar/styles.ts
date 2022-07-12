@@ -10,6 +10,8 @@ import {
   Twitter,
 } from '../../styles/Icons';
 
+import { Link } from 'react-router-dom';
+
 export const Container = styled.div`
   display: none;
   @media (min-width: 500px) {
@@ -61,8 +63,57 @@ export const MenuButton = styled.button`
   }
   padding: 8.25px 0;
   outline: 0;
+
+  & + button:last-child {
+    margin-top: 33px;
+    width: 40px;
+    height: 40px;
+    > span {
+      display: none;
+    }
+    @media (min-width: 1280px) {
+      width: 100%;
+      height: unset;
+      > span {
+        display: inline;
+      }
+    }
+  }
+  cursor: pointer;
+  border-radius: 25px;
+  &:hover {
+    background: var(--twitter-button-hover);
+  }
+  &:hover,
+  &.active {
+    span,
+    svg {
+      color: var(--primary);
+      fill: var(--primary);
+    }
+  }
+`;
+
+export const MenuButtonWork = styled(Link)`
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  > span {
+    display: none;
+  }
+  @media (min-width: 1280px) {
+    > span {
+      display: inline;
+      margin-left: 19px;
+      font-weight: bold;
+      font-size: 19px;
+    }
+    padding-right: 15px;
+  }
+  padding: 8.25px 0;
+  outline: 0;
   & + button {
-    margin-top: 16.5px;
   }
   & + button:last-child {
     margin-top: 33px;

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Container,
   Topside,
@@ -9,6 +8,7 @@ import {
   EmailIcon,
   FavoriteIcon,
   ProfileIcon,
+  MenuButtonWork,
 } from './styles';
 
 import Button from '../Button';
@@ -19,10 +19,10 @@ const MenuBar = () => {
       <Topside>
         <Logo />
 
-        <MenuButton>
+        <MenuButtonWork to="/">
           <HomeIcon />
           <span>Página Inicial</span>
-        </MenuButton>
+        </MenuButtonWork>
 
         <MenuButton>
           <BellIcon />
@@ -39,10 +39,10 @@ const MenuBar = () => {
           <span>Favoritados</span>
         </MenuButton>
 
-        <MenuButton className="active">
+        <MenuButtonWork to="/main">
           <ProfileIcon />
           <span>Perfil</span>
-        </MenuButton>
+        </MenuButtonWork>
 
         <Button>
           <span>Tweetar</span>
