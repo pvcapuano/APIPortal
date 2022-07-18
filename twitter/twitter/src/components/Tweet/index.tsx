@@ -33,7 +33,7 @@ const Tweet = () => {
 
           <Description>Salve salve rapaziada</Description>
 
-          <ImageContent />
+          {/* <ImageContent /> */}
           <Icons>
             <Status>
               <CommentIcon />
