@@ -11,9 +11,15 @@ import {
 import Feed from '../Feed';
 import { Avatar, Button } from '@mui/material';
 import { useState } from 'react';
+import PostFeed from '../PostFeed';
+
+interface Posts {
+  id: number;
+  postText: string;
+}
 
 const Post = () => {
-  const [posts, setPosts] = useState([
+  const [posts, setPosts] = useState<Posts[]>([
     { id: 1, postText: 'eu sou uma batata' },
     { id: 2, postText: 'ao infinito e além' },
   ]);
@@ -23,8 +29,6 @@ const Post = () => {
   let tweetBox = (e: any) => {
     setCurrentPost(e.target.value);
   };
-
-  console.log(currentPost);
 
   const addPost = () => {
     let novoPost = { id: 3, postText: currentPost };
@@ -56,11 +60,13 @@ const Post = () => {
         </DivButton>
       </TweetBox>
 
-      {posts.map((post) => (
+      <PostFeed props={posts} />
+
+      {/* {posts.map((post) => (
         <div>
           <p key={post.id}>{post.postText}</p>
         </div>
-      ))}
+      ))} */}
     </Container>
   );
 };
