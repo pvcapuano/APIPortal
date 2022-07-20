@@ -9,6 +9,7 @@ import {
 } from './styles';
 
 import Feed from '../Feed';
+import PostFeed from '../PostFeed';
 
 const ProfilePage = () => {
   return (

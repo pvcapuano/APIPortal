@@ -18,9 +18,8 @@ import {
 } from './styles';
 
 import { format } from 'date-fns';
-import { useState } from 'react';
 
-const PostFeed = ({ props }: any) => {
+const PostFeed = ({ posts, deletePost }: any) => {
   const tweetDate = format(new Date(), 'dd/MM/yyyy');
 
   return (
@@ -30,7 +29,7 @@ const PostFeed = ({ props }: any) => {
       <Tweets>
         <ContainerPost>
           <Retweeted>Você tweetou</Retweeted>
-          {props.map((post: any) => (
+          {posts.map((post: any) => (
             <Body key={post.id}>
               <Avatar />
 
@@ -48,18 +47,18 @@ const PostFeed = ({ props }: any) => {
                 <Icons>
                   <Status>
                     <CommentIcon />
-                    18
+                    10
                   </Status>
                   <Status>
                     <RetweetIcon />
-                    18
+                    15
                   </Status>
                   <Status>
                     <LikeIcon />
-                    999
+                    20
                   </Status>
                   <Status>
-                    <button>Delete</button>
+                    <button onClick={() => deletePost(post.id)}>Delete</button>
                   </Status>
                 </Icons>
               </Content>
